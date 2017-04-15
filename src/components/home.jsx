@@ -11,10 +11,10 @@ export class Home extends React.Component {
     this.props.getImages();
   }
   render() {
-    return (
+    return(
       <div>
         <ProfileHeader />
-        {this.props.isLoqding ? <Spinner /> : <ImageContainer imageList={this.props.imageList} />}
+        {this.props.isLoading ? <Spinner /> : <ImageContainer imageList={this.props.imageList} />}
       </div>
     );
   }

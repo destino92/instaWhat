@@ -17,7 +17,7 @@ import reducer from './reducer';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas'
-import FilestackKey from '././config.js';
+import {Filestack_Key} from '../config.js';
 // our components
 import Layout from './components/layout';
 import { HomeContainer } from './components/home';
@@ -26,7 +26,7 @@ import { AddContainer } from './components/add';
 // app css
 
 // Filestack API requires to set a key
-filepicker.setKey("YOUR_API_KEY");
+filepicker.setKey(Filestack_Key);
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(

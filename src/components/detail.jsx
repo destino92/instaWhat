@@ -44,4 +44,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export const DetailContair = connect(mapStateToProps, mapDispatchToPropsa).(Detail);
+export const DetailContair = connect(mapStateToProps, mapDispatchToProps)(Detail);

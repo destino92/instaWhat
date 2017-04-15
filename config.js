@@ -1,1 +1,1 @@
-export var FilestackKey = 'AJ6AF4xYS7OQfxfyJnjMjz';
+export const Filestack_Key = 'AJ6AF4xYS7OQfxfyJnjMjz';

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Spinner from './spinner';
 import {
-  updloadImage,
+  uploadImage,
   postImage,
   setFilters
 } from '../action-creators';
@@ -55,7 +55,7 @@ export class Add extends React.Component {
                     <div className="form-group">
                       <label htmlFor="picture">Picture</label>
                       <div className="text-center dropup">
-                        <button id="button-upload" type="button" className="btn btn-default filepicker" onClick={() => this.props.UploadImage()}>
+                        <button id="button-upload" type="button" className="btn btn-default filepicker" onClick={() => this.props.uploadImage()}>
                           Upload <span className="caret" />
                         </button>
                       </div>
@@ -83,9 +83,9 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(diaptch) {
+function mapDispatchToProps(dispatch) {
   return {
-    updloadImage: () => dispatch(UploadImage()),
+    uploadImage: () => dispatch(uploadImage()),
     setFilters: () => dispatch(setFilters()),
     postImage: () => dispatch(postImage())
   };

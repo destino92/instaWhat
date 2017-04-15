@@ -30,11 +30,11 @@ export default function (state = INITIAL_STATE, action) {
         }
       });
     case 'UPLOAD_IMAGE_SUCCESS':
-      return state.updateIn({
+      return state.updateIn(
         ['upload','handle'],
         '',
         handle => action.payload
-      });
+      );
     case 'POST_IMAGE':
       return state.merge({
         view: {
@@ -52,11 +52,11 @@ export default function (state = INITIAL_STATE, action) {
         }
       });
     case 'SET_FILTERS':
-      return state.updateIn({
-        ['upload', 'filters'],
+      return state.updateIn(
+        ['upload','filters'],
         '',
         filter => action.payload
-      });
+      );
     default: return state;
   }
 }
