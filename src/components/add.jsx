@@ -19,6 +19,7 @@ export class Add extends React.Component {
     }
     this.props.setFilters(selectedFilters.join('/') + '/');
   }
+
   getImageUrl() {
     return this.props.image ? `https://process.filestackapi.com/${this.props.filter}${this.props.image}` : ``;
   }
@@ -87,7 +88,7 @@ function mapDispatchToProps(diaptch) {
     updloadImage: () => dispatch(UploadImage()),
     setFilters: () => dispatch(setFilters()),
     postImage: () => dispatch(postImage())
-  }
+  };
 }
 
 export const AddContainer = connect(mapStateToProps, mapDispatchToProps)(Add);
